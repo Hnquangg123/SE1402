@@ -5,7 +5,8 @@
  */
 package tdd;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 import static util.MyToys.cF; // lat hoi xai ham static eo can MyToys.
                               // goi cF() nhu ben C
 
@@ -21,7 +22,7 @@ public class MyToyTest {
     // vi du ta test tinh huong dua vao ca chon, nhan ve Exception
     // dam bao nhung tinh huong nay chay nhu du kien/mong doi/expected
     // luc do NetBeans nem mau xanh khi on, do khi co van de
-    @org.junit.Test
+    @Test
     public void testSuccessfullCases() {
         
         assertEquals(1, cF(0));
@@ -42,7 +43,7 @@ public class MyToyTest {
     // xai them ki thuat bat ngoai le, coi ngoai le xay ra giong
     // nhu minh ki vong
     
-    @org.junit.Test(expected = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testExceptionCases() {
         
         // ko co value de assert do ham cF() nem ra ngoai le
