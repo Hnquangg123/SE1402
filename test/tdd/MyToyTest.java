@@ -5,7 +5,6 @@
  */
 package tdd;
 
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static util.MyToys.cF; // lat hoi xai ham static eo can MyToys.
                               // goi cF() nhu ben C
@@ -27,11 +26,11 @@ public class MyToyTest {
         
         assertEquals(1, cF(0));
         assertEquals(6, cF(1));
-        assertEquals(6, cF(2));
-        assertEquals(24, cF(3));
-        assertEquals(120, cF(4));
-        assertEquals(720, cF(5));
-        assertEquals(820, cF(6));   // do? xay ra di 2 tinh huong
+        assertEquals(2, cF(2));
+        assertEquals(6, cF(3));
+        assertEquals(24, cF(4));
+        assertEquals(120, cF(5));
+        assertEquals(720, cF(6));   // do? xay ra di 2 tinh huong
                                     // hoac ban xu li sai, hoac ban ki 
                                     // vong sai
                                     // co do?, kiem tra code di
