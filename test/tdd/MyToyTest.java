@@ -23,7 +23,7 @@ public class MyToyTest {
     // dam bao nhung tinh huong nay chay nhu du kien/mong doi/expected
     // luc do NetBeans nem mau xanh khi on, do khi co van de
     @Test
-    public void testSuccessfullCases() {
+    public void testSuccessfullLower10Cases() {
         
         assertEquals(1, cF(0));
         assertEquals(2, cF(2));
@@ -36,6 +36,12 @@ public class MyToyTest {
                                     // co do?, kiem tra code di
     }
     
+    @Test
+    public void testSuccessfullGreater10Cases() {
+        
+        assertEquals(3_628_800, cF(10));
+        assertEquals(36_916_800, cF(11));
+    }
     
     // Ngoai le Exception la 1 thu ko the là value đe uoc luong
     // vay thi ko the assert đc, vi no can phai co value de so sanh 
@@ -43,11 +49,21 @@ public class MyToyTest {
     // nhu minh ki vong
     
     @Test(expected = IllegalArgumentException.class)
-    public void testExceptionCases() {
+    public void testExceptionNegativeCases() {
         
         // ko co value de assert do ham cF() nem ra ngoai le
         cF(-5);
-        cF(100);        
+        cF(-100);        
+        cF(-1);        
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testExceptionUpperBoundCases() {
+        
+        // ko co value de assert do ham cF() nem ra ngoai le
+        cF(15);
+        cF(16);        
+        cF(17);        
     }
     
     
