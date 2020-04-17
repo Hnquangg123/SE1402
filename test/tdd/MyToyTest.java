@@ -40,7 +40,7 @@ public class MyToyTest {
     public void testSuccessfullGreater10Cases() {
         
         assertEquals(3_628_800, cF(10));
-        assertEquals(36_916_800, cF(11));
+        assertEquals(39_916_800, cF(11));
     }
     
     // Ngoai le Exception la 1 thu ko the là value đe uoc luong
