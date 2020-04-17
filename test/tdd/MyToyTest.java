@@ -63,7 +63,8 @@ public class MyToyTest {
         // ko co value de assert do ham cF() nem ra ngoai le
         cF(15);
         cF(16);        
-        cF(17);        
+        cF(17);  
+        cF(18);
     }
     
     
