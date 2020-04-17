@@ -20,16 +20,10 @@ public class MyToys {
         if (n < 0 || n > 15) {
             throw new IllegalArgumentException("Sorry, n must be >= 0");
         }
-        if (n == 0) {
+        if (n == 0 || n == 1) {
             return 1;
-        } else {    // phan con lai la hop le, tinh bt
-            long product = 1;
-
-            for (int i = 0; i < n; i++) {
-                product = product * (i+1);
-            }
-            return product;
         }
+        return cF(n-1) * n;
 
     }
     
